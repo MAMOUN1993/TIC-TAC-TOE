@@ -1,0 +1,251 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.main_start{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(image/Screen+Shot+2020-02-29+at+1.07.46+PM.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game_area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: 800px;
+    position: relative;
+    opacity: 0;
+    z-index: -1;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes show_Div {
+    0%{opacity: 0;
+    z-index: -1;}
+    100%{
+        opacity: 1;
+    z-index: 1;
+    }
+}
+.game_area img{
+    width: 100%;
+    opacity: 0.8;
+}
+.game_pad {
+    width: 475px;
+    height: 475px;
+    position: absolute;
+    display: flex;
+    gap: 4%;
+    justify-content: space-between;
+    margin-left: 1%;
+}
+.game_pad>div{
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    position: relative;
+}
+.game_pad>div>div {
+    height: 32%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fa-x{
+    font-size: 60px;
+    animation-name: opa;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+}
+.fa-o{
+    font-size: 60px;
+    animation-name: opa;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+}
+@keyframes opa {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.solve11{
+    margin-left: 15%;
+    margin-top: 47%;
+    position: absolute;
+    display: block;
+    background-color: black;
+    border-radius: 10px;
+    width: 300%;
+    height: 3%;
+    z-index: -1;
+    opacity: 0;
+    transition-duration: 0.2s;
+}
+.solve12{
+    margin-left: 15%;
+    margin-top: 158%;
+    position: absolute;
+    display: block;
+    background-color: black;
+    border-radius: 10px;
+    width: 300%;
+    height: 3%;
+    z-index: -1;
+    opacity: 0;
+    transition-duration: 0.2s;
+}
+.solve13{
+    margin-left: 15%;
+    margin-top: 269%;
+    position: absolute;
+    display: block;
+    background-color: black;
+    border-radius: 10px;
+    width: 300%;
+    height: 3%;
+    z-index: -1;
+    opacity: 0;
+    transition-duration: 0.2s;
+}
+.solve21{
+    position: absolute;
+    display: block;
+    background-color: black;
+    border-radius: 10px;
+    width: 10%;
+    height: 80%;
+    margin-left: 45%;
+    margin-top: 31%;
+    z-index: -1;
+    opacity: 0;
+    transition-duration: 0.2s;
+}
+.solve23{
+    position: absolute;
+    display: block;
+    background-color: black;
+    border-radius: 10px;
+    width: 10%;
+    height: 80%;
+    margin-left: 271%;
+    margin-top: 31%;
+    z-index: -1;
+    opacity: 0;
+    transition-duration: 0.2s;
+}
+.solve22{
+    position: absolute;
+    display: block;
+    background-color: black;
+    border-radius: 10px;
+    width: 10%;
+    height: 80%;
+    margin-left: 158%;
+    margin-top: 31%;
+    z-index: -1;
+    opacity: 0;
+    transition-duration: 0.2s;
+}
+.solve3{
+    position: absolute;
+    display: block;
+    background-color: black;
+    border-radius: 10px;
+    width: 9%;
+    height: 116%;
+    transform: rotate(45deg);
+    margin-left: 158%;
+    margin-top: -24%;
+    z-index: -1;
+    opacity: 0;
+    transition-duration: 0.2s;
+}
+.solve4{
+    position: absolute;
+    display: block;
+    background-color: black;
+    border-radius: 10px;
+    width: 9%;
+    height: 116%;
+    transform: rotate(-45deg);
+    margin-left: 158%;
+    margin-top: -24%;
+    z-index: -1;
+    opacity: 0;
+    transition-duration: 0.2s;
+}
+.start{
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 12px 6px;;
+    border-radius: 15px;
+    background-color: #abffff;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes display {
+    0%{opacity: 1;
+        z-index: 1;
+    }
+    100%{opacity: 0;
+    z-index: -1;
+    
+}
+}
+.start p {
+    font-size: 35px;
+    color:black;
+}
+.start>div{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.start>div>button{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+.start_buttton{
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.restart{
+    position: absolute;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    opacity: 0;
+    transition-duration: 0.2s;
+    background-color:#abffffb2 ;
+    gap: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+}
+.resolt{
+    font-size: 34px;
+}
+.restart_game {
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 15px;
+    font-size: 24px;
+}
